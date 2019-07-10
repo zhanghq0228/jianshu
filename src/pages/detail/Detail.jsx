@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {withRouter} from 'react-router-dom'
 import { DetailWrapper } from './detailStyle';
 import {getDetailList} from '../../store/actionCreate';
 class Detaile extends Component {
@@ -32,4 +33,4 @@ export default connect((state) => {
   return {
     detail: state.detail
   }
-}, {getDetailList})(Detaile)
+}, {getDetailList})(withRouter(Detaile))
